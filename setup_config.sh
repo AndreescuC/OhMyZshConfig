@@ -14,6 +14,10 @@ printf '\nZSH_THEME="nebirhos"\n' >> ~/.zshrc
 
 # Use my aliases
 echo "===> Creating aliases"
-mkdir ~/.zsh
+{
+	mkdir ~/.zsh
+} || {
+	echo "===> Unable to create directory, assuming it is created"
+}
 printf '\nalias ..="cd .."\nalias ...="cd ../.."\nalias ....="cd ../../.."\nalias .....="cd ../../../.."\n\nalias grep="nocorrect grep --color=auto"\n\nalias ll="ls -lh"\nalias run-help=man\nalias which-command=whence\n\nalias mark="pwd > ~/.sd"\nalias port="cd $(cat ~/.sd)"\nalias ll="ls -alF"' > ~/.zsh/aliasrc 
 printf '\nsource ~/.zsh/aliasrc\n' >> ~/.zshrc
