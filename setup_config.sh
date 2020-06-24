@@ -10,7 +10,7 @@
 
 # Use custom theme
 echo "===> Setting theme"
-printf '\nZSH_THEME="nebirhos"\n' >> ~/.zshrc
+sed -i '/ZSH_THEME=".*"/c\ZSH_THEME="nebirhos"' ~/.zshrc
 
 # Use my aliases
 echo "===> Creating aliases"
