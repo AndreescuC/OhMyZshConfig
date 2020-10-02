@@ -33,7 +33,7 @@ echo "===> Creating aliases"
 } || {
 	echo "===> Unable to create directory, assuming it is created"
 }
-printf '\nalias ..="cd .."\nalias ...="cd ../.."\nalias ....="cd ../../.."\nalias .....="cd ../../../.."\n\nalias grep="nocorrect grep --color=auto"\n\nalias ll="ls -lh"\nalias run-help=man\nalias which-command=whence\n\nalias mark="pwd > ~/.sd"\nalias port="cd $(cat ~/.sd)"\nalias ll="ls -alF"' > ~/.zsh/aliasrc 
+printf 'alias ..="cd .."\nalias ...="cd ../.."\nalias ....="cd ../../.."\nalias .....="cd ../../../.."\nalias grep="nocorrect grep --color=auto"\nalias ll="ls -lh"\nalias run-help=man\nalias which-command=whence\nalias docker-kill-all="docker kill \$(docker ps -q)"\nalias docker-rm-all="docker rm \$(docker ps -a -q)"\nalias docker-rmi-all="docker rmi \$(docker images -q)"\nalias mark="pwd > ~/.sd"\nalias port="cd $(cat ~/.sd)"\nalias ll="ls -alF"' > ~/.zsh/aliasrc 
 printf '\nsource ~/.zsh/aliasrc\n' >> ~/.zshrc
 
 # Color git
